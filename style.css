@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #00695c;
+    --secondary-color: #26a69a;
+    --bg-light: #e0f2f1;
+    --text-dark: #004d40;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-light);
+    animation: fadeIn 1s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    animation: slideDown 1s ease;
+  }
+
+  @keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+
+  .card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomIn 0.8s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .card h2 {
+    color: var(--primary-color);
+  }
+
+  .card p {
+    color: #555;
+  }
+
+  .btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #004d40;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  .cta {
+    text-align: center;
+    margin-top: 3rem;
+    animation: fadeIn 1.2s ease;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #4b4b4b;
+    background-color: #c8e6c9;
+    margin-top: 2rem;
+  }
